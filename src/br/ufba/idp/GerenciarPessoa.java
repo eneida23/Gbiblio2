@@ -1,7 +1,7 @@
 package br.ufba.idp;
 
 import java.util.ArrayList;
-
+// testando 
 
 public class GerenciarPessoa {
 	private ArrayList<Pessoa> pessoas;

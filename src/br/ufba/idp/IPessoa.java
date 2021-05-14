@@ -1,5 +1,5 @@
 package br.ufba.idp;
-
+// testando 
 public interface IPessoa {
 	public String getNome(); 	
 	public String  getCodPessoa();
