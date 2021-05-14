@@ -15,6 +15,8 @@ public class Biblioteca {
         {
                 return livros.size();
         }
+        
+        //teste
 
 
         public void incluirLivro(Livro livro) throws NullPointerException
