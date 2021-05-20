@@ -3,7 +3,7 @@ package br.ufba.idp;
 import java.util.ArrayList;
 
 public class Biblioteca {
-	 // testando 
+	 
         private ArrayList<Livro> livros;
         
         public Biblioteca() 
@@ -16,9 +16,7 @@ public class Biblioteca {
                 return livros.size();
         }
         
-        //teste
-
-
+        
         public void incluirLivro(Livro livro) throws NullPointerException
         {
                 if (livro == null)
