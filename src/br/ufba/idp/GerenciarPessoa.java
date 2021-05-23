@@ -1,21 +1,21 @@
 package br.ufba.idp;
 
 import java.util.ArrayList;
-// testando 
+
 
 public class GerenciarPessoa {
-	private ArrayList<Pessoa> pessoas;
+	private ArrayList<Usuario> pessoas;
 
 	 public GerenciarPessoa () 
      { 
-             pessoas = new ArrayList<Pessoa>();
+             pessoas = new ArrayList<Usuario>();
      }
 	
-     public ArrayList<Pessoa> getPessoas() {
+     public ArrayList<Usuario> getPessoas() {
 		return pessoas;
 	}
 
-	public void setPessoas(ArrayList<Pessoa> pessoas) {
+	public void setPessoas(ArrayList<Usuario> pessoas) {
 		this.pessoas = pessoas;
 	}
 	
@@ -23,7 +23,7 @@ public class GerenciarPessoa {
       {
            return pessoas.size();
       }
-	 public void incluirPessoa(Pessoa pessoa) throws NullPointerException
+	 public void incluirPessoa(Usuario pessoa) throws NullPointerException
      {
              if (pessoa == null)
              {
@@ -35,9 +35,9 @@ public class GerenciarPessoa {
              }
      }
 	 
-	 public Pessoa obterPessoa(String cod)
+	 public Usuario obterPessoa(String cod)
      {
-             for(Pessoa pessoa : pessoas)
+             for(Usuario pessoa : pessoas)
              {
                      if (pessoa != null)
                      {
@@ -50,11 +50,11 @@ public class GerenciarPessoa {
              return null;
      }
 	 
-	 public ArrayList<Pessoa> obterPessoas(String nome)
+	 public ArrayList<Usuario> obterPessoas(String nome)
      {
-             ArrayList<Pessoa> lista = new ArrayList<Pessoa>();
+             ArrayList<Usuario> lista = new ArrayList<Usuario>();
              
-             for(Pessoa pessoa : pessoas)
+             for(Usuario pessoa : pessoas)
              {
                      if (pessoa != null)
                      {
@@ -68,7 +68,7 @@ public class GerenciarPessoa {
              
      }
 	 
-	 public Pessoa getPessoa(int posicao) throws IndexOutOfBoundsException
+	 public Usuario getPessoa(int posicao) throws IndexOutOfBoundsException
      {
              if (posicao < this.getQuantidade()) 
                      return pessoas.get(posicao);

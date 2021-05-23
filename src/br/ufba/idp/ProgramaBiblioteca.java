@@ -12,7 +12,7 @@ public class ProgramaBiblioteca {
                "* Prática de Padrões de Projeto\n", null, JOptionPane.INFORMATION_MESSAGE);
                  
         Livro livro;
-        Pessoa pessoa;
+        Usuario pessoa;
 //        ArrayList<Livro> listaLivros;
         int opcao = 0;
         String opcoes = 
@@ -120,9 +120,9 @@ static Livro digitarLivro()
         
 }
 
-static Pessoa digitarPessoa()
+static Usuario digitarPessoa()
 {
-        Pessoa pes = new Pessoa(null, null);
+        Usuario pes = new Usuario(null, null);
         pes.setCodPessoa(JOptionPane.showInputDialog("Código da Pessoa:"));
         pes.setNome(JOptionPane.showInputDialog("Nome da Pessoa:"));
               

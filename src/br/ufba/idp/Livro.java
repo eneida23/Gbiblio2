@@ -6,11 +6,9 @@ public class Livro {
       private String autor;
       private String editora;
       private int anoPublicacao;
-    // testando 
-      
-      public Livro() 
-      {  }
-
+      private int qtexemplares;
+   
+           
       public Livro(int codigo, String titulo, String autor, 
                       int anoPublicacao,String editora) 
       {
@@ -68,6 +66,10 @@ public class Livro {
 
 	public void setAnoPublicacao(int anoPublicacao) {
 		this.anoPublicacao = anoPublicacao;
+	}
+
+	public int getQtexemplares() {
+		return qtexemplares;
 	}
 
    
