@@ -1,14 +1,14 @@
 package br.ufba.idp;
 
 public class Usuario implements IUsuario{
-private String  codPessoa;
+private String  codUsuario;
 private String nome;
 
-public String getCodPessoa() {
-	return codPessoa;
+public String getCodUsuario() {
+	return codUsuario;
 }
-public void setCodPessoa(String codPessoa) {
-	this.codPessoa = codPessoa;
+public void setCodUsuario(String codUsuario) {
+	this.codUsuario = codUsuario;
 }
 public String getNome() {
 	return nome;

@@ -7,7 +7,7 @@ public class ProgramaBiblioteca {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Biblioteca biblio = new Biblioteca();
-		GerenciarPessoa gpessoa = new GerenciarPessoa();
+		GerenciarUsuario gpessoa = new GerenciarUsuario();
         JOptionPane.showMessageDialog(null, "* Bem-vindo ao Sistema Biblioteca !\n"+
                "* Prática de Padrões de Projeto\n", null, JOptionPane.INFORMATION_MESSAGE);
                  
@@ -19,8 +19,8 @@ public class ProgramaBiblioteca {
           "\n\n***Opções*** "+
           "\n1. Cadastrar Livro"+
           "\n2. Listar Livros"+
-          "\n3. Cadastrar Pessoa"+
-          "\n4. Listar Pessoa"+
+          "\n3. Cadastrar Usuario"+
+          "\n4. Listar Usuario"+
           "\n5. Finalizar"+
           "\n\nSelecione a opção: ";
 
@@ -70,7 +70,7 @@ public class ProgramaBiblioteca {
                   case 3:
                       try 
                       {
-                        gpessoa.incluirPessoa(digitarPessoa());                                  
+                        gpessoa.incluirUsuario(digitarPessoa());                                  
                       }
                       catch(NullPointerException ex)
                       {
@@ -94,8 +94,8 @@ public class ProgramaBiblioteca {
                 lista.append("Lista de Pessoas Cadastrados:\n");
                 for (int i=0;i<gpessoa.getQuantidade();i++)
                 {
-                        pessoa = gpessoa.getPessoa(i);
-                        lista.append(pessoa.getCodPessoa()+" - "+
+                        pessoa = gpessoa.getUsuario(i);
+                        lista.append(pessoa.getCodUsuario()+" - "+
                                         pessoa.getNome()) ;
                 }
                 lista.append("Total: "+gpessoa.getQuantidade()+" livro(s)");
@@ -123,7 +123,7 @@ static Livro digitarLivro()
 static Usuario digitarPessoa()
 {
         Usuario pes = new Usuario(null, null);
-        pes.setCodPessoa(JOptionPane.showInputDialog("Código da Pessoa:"));
+        pes.getCodUsuario(JOptionPane.showInputDialog("Código da Pessoa:"));
         pes.setNome(JOptionPane.showInputDialog("Nome da Pessoa:"));
               
         return pes;
