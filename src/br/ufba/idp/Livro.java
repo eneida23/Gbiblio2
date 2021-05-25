@@ -1,15 +1,13 @@
 package br.ufba.idp;
-//testando
+
 public class Livro {
 	  private int codigo;
       private String titulo;
       private String autor;
       private String editora;
       private int anoPublicacao;
-      private int qtexemplares;
-   
-    //testando
-      
+     
+         
       public Livro(int codigo, String titulo, String autor, 
                       int anoPublicacao,String editora) 
       {
@@ -69,11 +67,7 @@ public class Livro {
 		this.anoPublicacao = anoPublicacao;
 	}
 
-	public int getQtexemplares() {
-		return qtexemplares;
-	}
-
-   
+	   
       
 }
 

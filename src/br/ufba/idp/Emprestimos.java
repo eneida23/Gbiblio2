@@ -1,25 +1,18 @@
 package br.ufba.idp;
 
+import java.time.LocalDateTime;
 
 public class Emprestimos {
 	private int id; // ID do livro emprestado
-	private String codUsuario; // código do usuário que pegou o livro
-	private long data_emp; // Data de emprestimo
+	private Usuario usuarioemprestimo; 
+	private LocalDateTime data_emp; // Data de emprestimo
 	private long data_dev; // Prazo maximo de devolução
 	private long data_rec; // Data em que o livro foi de fato recebido
 
-	void Emprestimo()
+	
+	void Emprestimo(Usuario usuarioemprestimo, int id, LocalDateTime data_emp, long data_dev)
 	        {
-	            this.codUsuario = null;
-	            this.id = -1;
-	            this.data_emp = -1;
-	            this.data_dev = -1;
-	            this.data_rec = -1;
-	        }
-
-	void Emprestimo(String codUsuario, int id, long data_emp, long data_dev)
-	        {
-	            this.codUsuario = codUsuario;
+	            this.usuarioemprestimo = usuarioemprestimo;
 	            this.id = id;
 	            this.data_emp = data_emp;
 	            this.data_dev = data_dev;
@@ -40,11 +33,7 @@ public class Emprestimos {
 		return id;
 	}
 
-	public String getCodUsuario() {
-		return codUsuario;
-	}
-
-	public long getData_emp() {
+	public LocalDateTime getData_emp() {
 		return data_emp;
 	}
 
@@ -55,5 +44,17 @@ public class Emprestimos {
 	public long getData_rec() {
 		return data_rec;
 	}
+
+	public Usuario getUsuarioemprestimo() {
+		return usuarioemprestimo;
+	}
+
+	public void setUsuarioemprestimo(Usuario usuarioemprestimo) {
+		this.usuarioemprestimo = usuarioemprestimo;
+	}
+	public void emprestar(Usuario usuarioemprestimo) {
+        this.usuarioemprestimo = usuarioemprestimo;
+        this.data_emp = LocalDateTime.now();
+    }
 
 }

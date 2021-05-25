@@ -1,17 +1,9 @@
 package br.ufba.idp;
 
-
 public class Exemplar {
+	private String codexemplar;
 	private double qtexemplares = 0;
-	private String codexemplar; 
-	
-	public double getQtexemplares() {
-		return qtexemplares;
-	}
-		
-	public void setQtexemplares(Livro liv)  {
-		this.qtexemplares += liv.getQtexemplares();
-	}
+	private Livro livro;
 
 	public String getCodexemplar() {
 		return codexemplar;
@@ -19,5 +11,22 @@ public class Exemplar {
 
 	public void setCodexemplar(String codexemplar) {
 		this.codexemplar = codexemplar;
+
+	}
+
+	public double getQtexemplares() {
+		return qtexemplares;
+	}
+
+	public void setQtexemplares(double qtexemplares) {
+		this.qtexemplares = qtexemplares;
+	}
+
+	public Livro getLivro() {
+		return livro;
+	}
+
+	public void setLivro(Livro livro) {
+		this.livro = livro;
 	}
 }

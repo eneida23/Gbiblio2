@@ -1,15 +1,14 @@
 package br.ufba.idp;
 
 import java.util.ArrayList;
-import java.util.Map;
+//import java.util.Map;
 
 public class GerenciarEmprestimo {
         
-        private Map<String, Usuario> usuarios;
-        private Map<Integer, Livro> livros;
-        
-                       
-        private int i = 0; //incrementa o id do emprestimo
+  //      private Map<String, Usuario> usuarios;
+    //    private Map<Integer, Livro> livros;
+                               
+   //     private int i = 0; //incrementa o id do emprestimo
         //cria listas
         private ArrayList<Emprestimos> emprestimos = new ArrayList<Emprestimos>();
         private ArrayList<Emprestimos> devolucoes = new ArrayList<Emprestimos>();
