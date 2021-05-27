@@ -1,5 +1,6 @@
 package br.ufba.idp;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 //import java.util.Map;
 
@@ -25,4 +26,10 @@ public class GerenciarEmprestimo {
         public void setDevolucoes(ArrayList<Emprestimos> devolucoes) {
         this.devolucoes = devolucoes;
         }
+        
+  /*      public void emprestar(Usuario usuario) {
+            this.usuario = usuario;
+            this.data_emp = LocalDateTime.now();
+        }*/
 }
+

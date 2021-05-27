@@ -29,4 +29,5 @@ public class Exemplar {
 	public void setLivro(Livro livro) {
 		this.livro = livro;
 	}
+	
 }

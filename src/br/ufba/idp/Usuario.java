@@ -1,9 +1,11 @@
 package br.ufba.idp;
 
-public class Usuario implements IUsuario{
+public abstract class Usuario {
 private String  codUsuario;
 private String nome;
-private int tempoEmprestimoEmDias = 3;
+
+
+//private ArrayList<Emprestimos> emprestimos = new ArrayList<Emprestimos>();
 
 public String getCodUsuario() {
 	return codUsuario;
@@ -17,10 +19,6 @@ public String getNome() {
 public void setNome(String nome) {
 	this.nome = nome;
 }
-@Override
-public int getTempoEmprestimoEmDias() {
-	// TODO Auto-generated method stub
-	return this.tempoEmprestimoEmDias;
-}
+
 
 }
