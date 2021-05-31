@@ -1,56 +1,47 @@
 package br.ufba.idp;
 
 public class Livro {
-	  private int codigo;
-      private String titulo;
-      private String autor;
-      private String editora;
-      private int anoPublicacao;
-     
-         
-      public Livro(int codigo, String titulo, String autor, 
-                      int anoPublicacao,String editora) 
-      {
-              
-              setCodigo(codigo);
-              setTitulo(titulo);
-              setAutor(autor);
-              setEditora(editora);
-              setAnoPublicacao(anoPublicacao);
-              
-      }
+	private int codigo;
+	private String titulo;
+	private String autor;
+	private String editora;
+	private int anoPublicacao;
+	
 
-      public int getCodigo() 
-      {
-              return codigo;
-      }
+	public Livro(int codigo, String titulo, String autor, int anoPublicacao, String editora) {
 
-      public String getTitulo() 
-      {
-              return titulo;
-      }
+		setCodigo(codigo);
+		setTitulo(titulo);
+		setAutor(autor);
+		setEditora(editora);
+		setAnoPublicacao(anoPublicacao);
+		
+	}
 
-      public String getAutor() 
-      {
-              return autor;
-      }
+	public int getCodigo() {
+		return codigo;
+	}
 
-         
-      public void setCodigo(int codigo) 
-      {
-              this.codigo = codigo;
-      }
+	public String getTitulo() {
+		return titulo;
+	}
 
-      public void setTitulo(String titulo) 
-      {
-              this.titulo = titulo;
-      }
+	public String getAutor() {
+		return autor;
+	}
 
-      public void setAutor(String autor) 
-      {
-              this.autor = autor;
-      }
-      
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
 	public String getEditora() {
 		return editora;
 	}
@@ -67,7 +58,6 @@ public class Livro {
 		this.anoPublicacao = anoPublicacao;
 	}
 
-	   
-      
-}
+	
 
+}

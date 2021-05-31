@@ -1,4 +1,4 @@
-package Biblioteca;
+package comando.blibio;
 
 import java.io.IOException;
 

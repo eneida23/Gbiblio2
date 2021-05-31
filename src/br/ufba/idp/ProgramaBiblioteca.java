@@ -10,7 +10,7 @@ public class ProgramaBiblioteca {
 		Biblioteca biblio = new Biblioteca();
 		GerenciarUsuario gpessoa = new GerenciarUsuario();
 		JOptionPane.showMessageDialog(null,
-				"* Bem-vindo ao Sistema Biblioteca !\n" + "* Prática de Padrões de Projeto\n", null,
+				"* Bem-vindo ao Sistema comando.blibio !\n" + "* Prática de Padrões de Projeto\n", null,
 				JOptionPane.INFORMATION_MESSAGE);
 
 		Livro livro;
@@ -102,7 +102,7 @@ public class ProgramaBiblioteca {
 	static void mostrarLivro(Livro x, String bib) {
 		String texto = "Livro:\n" + "\nCódigo: " + x.getCodigo() + "\nTítulo: " + x.getTitulo() + "\nAutor: "
 				+ x.getAutor() + "\nEditora " + x.getEditora() + "\nAnoPublicação " + x.getAnoPublicacao();
-		JOptionPane.showMessageDialog(null, texto, "Biblioteca: " + bib, JOptionPane.WARNING_MESSAGE);
+		JOptionPane.showMessageDialog(null, texto, "comando.blibio: " + bib, JOptionPane.WARNING_MESSAGE);
 	}
 
 }

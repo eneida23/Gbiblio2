@@ -5,8 +5,6 @@ private String  codUsuario;
 private String nome;
 
 
-//private ArrayList<Emprestimos> emprestimos = new ArrayList<Emprestimos>();
-
 public String getCodUsuario() {
 	return codUsuario;
 }

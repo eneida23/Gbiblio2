@@ -1,4 +1,4 @@
-package Biblioteca;
+package comando.blibio;
 
 public class BibliotecaFachada {
 	private static BibliotecaFachada instancia;
