@@ -2,6 +2,8 @@ package br.ufba.idp;
 
 import javax.swing.JOptionPane;
 
+import singleton.blibio.Biblioteca;
+
 // testando 
 public class ProgramaBiblioteca {
 

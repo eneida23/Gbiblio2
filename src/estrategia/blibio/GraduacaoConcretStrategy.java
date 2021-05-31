@@ -1,13 +1,15 @@
 package estrategia.blibio;
 
-import br.ufba.idp.Biblioteca;
+import singleton.blibio.Biblioteca;
 
 public class GraduacaoConcretStrategy implements EmprestimoStrategy{
 
 	@Override
 	public void realizarEmprestimo(int codUsuario, int codLivro) {
 		// TODO Auto-generated method stub
-		if Biblioteca.getInstance().consultarLivro(codLivro);
+		if (Biblioteca.getInstance().cosultarExemplar(codLivro) != null) {
+			
+		}
 	}
 
 }
