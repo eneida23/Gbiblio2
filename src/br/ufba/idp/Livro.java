@@ -1,27 +1,26 @@
 package br.ufba.idp;
 
 public class Livro {
-	private int codigo;
+	private Integer codigo;
 	private String titulo;
 	private String autor;
 	private String editora;
+	private String edicao;
 	private int anoPublicacao;
 	
 
-	public Livro(int codigo, String titulo, String autor, int anoPublicacao, String editora) {
+	public Livro(Integer codigo, String titulo, String autor, int anoPublicacao, String editora, String edicao) {
 
 		setCodigo(codigo);
 		setTitulo(titulo);
 		setAutor(autor);
 		setEditora(editora);
 		setAnoPublicacao(anoPublicacao);
+		setEdicao(edicao);
 		
 	}
 
-	public int getCodigo() {
-		return codigo;
-	}
-
+	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -30,10 +29,7 @@ public class Livro {
 		return autor;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
-
+	
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
@@ -58,6 +54,27 @@ public class Livro {
 		this.anoPublicacao = anoPublicacao;
 	}
 
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+
+	public String getEdicao() {
+		return edicao;
+	}
+
+
+	public void setEdicao(String edicao) {
+		this.edicao = edicao;
+	}
+
+
+
+	
 	
 
 }

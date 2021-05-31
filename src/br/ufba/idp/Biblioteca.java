@@ -1,72 +1,43 @@
 package br.ufba.idp;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Biblioteca {
-	 
-        private ArrayList<Livro> livros;
-        
-        public Biblioteca() 
-        { 
-                livros = new ArrayList<Livro>();
-        }
+	private static Map<Integer, Usuario> usuarios = new HashMap<Integer, Usuario>();
+	private static Map<Integer, Livro> livros = new HashMap<Integer, Livro>();
+	private static Map<Integer, Exemplar> exemplares = new HashMap<Integer, Exemplar>();
 
-        public int getQuantidade() 
-        {
-                return livros.size();
-        }
-        
-        
-        public void incluirLivro(Livro livro) throws NullPointerException
-        {
-                if (livro == null)
-                {
-                        throw new NullPointerException("Erro de Objeto Livro null");
-                }
-                else
-                {
-                    livros.add(livro);
-                }
-        }
-        
-        public Livro obterLivro(int cod)
-        {
-                for(Livro livro : livros)
-                {
-                        if (livro != null)
-                        {
-                                if (livro.getCodigo() == cod)
-                                {
-                                        return livro;
-                                }
-                        }
-                }
-                return null;
-        }
-        
-        public ArrayList<Livro> obterLivro(String tit)
-        {
-                ArrayList<Livro> lista = new ArrayList<Livro>();
+	private static Biblioteca instance;
+	private Biblioteca() 
+        { 
+               this.usuarios.put(Integer.valueOf(123), new UsuarioGrad(Integer.valueOf(123),"João da Silva"));
+               this.usuarios.put(Integer.valueOf(123), new UsuarioProfessor(Integer.valueOf(100),"Carlos Lucena"));
                 
-                for(Livro livro : livros)
-                {
-                        if (livro != null)
-                        {
-                                if (livro.getTitulo().indexOf(tit) >= 0)
-                                {
-                                        lista.add(livro);
-                                }
-                        }
-                }
-                return lista;
+               Livro liv100=  new Livro(Integer.valueOf(100),"Engeharia Software", "Ian Sommervile", 2000," Adilson Weley","6ª");
+               this.livros.put(Integer.valueOf(100), liv100 );
+                
+               this.exemplares.put(Integer.valueOf(1), new Exemplar(Integer.valueOf(1), 3,3, liv100));
         }
-        
-        public Livro getLivro(int posicao) throws IndexOutOfBoundsException
-        {
-                if (posicao < this.getQuantidade()) 
-                        return livros.get(posicao);
-                else
-                        throw new IndexOutOfBoundsException("Índice de Livro Inválido!");
-        }
-        
+public static Biblioteca getInstance() {
+	if (instance == null) {
+		instance = new Biblioteca();}
+	return instance;
+}
+
+	public static Livro consultarLivro (Integer codigo){	
+	
+	return this.livros.get(codigo);
+	}
+
+/*	public Livro consultarLivroAutor (Integer codigo){	
+		
+		return this.livros.get(codigo);
+		}*/
+	}
+
+
+
+
 }
