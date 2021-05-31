@@ -16,9 +16,9 @@ public class Biblioteca {
 	private static Map<Integer, Usuario> usuarios = new HashMap<Integer, Usuario>();
 	private static Map<Integer, Livro> livros = new HashMap<Integer, Livro>();
 	private static Map<Integer, Exemplar> exemplares = new HashMap<Integer, Exemplar>();
-	private static Map<Usuario, List<Exemplar> > emprestimos = new HashMap<Usuario, List<Exemplar>>();
+	private static Map<Usuario, List<Exemplar>> emprestimos = new HashMap<Usuario, List<Exemplar>>();
 	private static Biblioteca instance;
-	
+
 	private Biblioteca() {
 		this.usuarios.put(Integer.valueOf(123), new UsuarioGrad(Integer.valueOf(123), "João da Silva"));
 		this.usuarios.put(Integer.valueOf(789), new UsuarioGrad(Integer.valueOf(789), "Pedro Paulo"));
@@ -53,6 +53,11 @@ public class Biblioteca {
 		return livros.get(codigo);
 	}
 
+	public static Usuario consultarUsuario(Integer codigo) {
+
+		return usuarios.get(codigo);
+	}
+
 	public static Exemplar cosultarExemplar(int codigo) {
 		for (Exemplar exemplar : exemplares.values()) {
 			if (exemplar.getLivro().getCodigo().intValue() == codigo) {
@@ -64,10 +69,23 @@ public class Biblioteca {
 		}
 		return null;
 	}
-public static void realizarEmprestimo(Usuario usuario,List <Exemplar> exemplar) {
 
-	emprestimos.get(usuario).add((Exemplar) exemplar);
+	public static void realizarEmprestimo(Usuario usuario, Exemplar exemplar) {
+
+		emprestimos.get(usuario).add(exemplar);
+
+	}
+
+	public static void realizarDevolucao(Usuario usuario, List<Exemplar> exemplar) {
+
+	}
+
+	public static void realizarReserva(Usuario usuario, List<Exemplar> exemplar) {
+
+	}
+
+	public static void listarEmprestimo(Usuario usuario, List<Exemplar> exemplar) {
+
+	}
 
 }
-}
-

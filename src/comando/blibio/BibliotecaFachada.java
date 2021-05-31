@@ -1,5 +1,7 @@
 package comando.blibio;
 
+import estrategia.blibio.GraduacaoConcretStrategy;
+
 public class BibliotecaFachada {
 	private static BibliotecaFachada instancia;
 	
@@ -12,7 +14,9 @@ public class BibliotecaFachada {
 		}
 		return instancia;
 	}
-	public void realizarEmprestimo() {
+	public void realizarEmprestimo(int codUsuario, int codLivro) {
+		GraduacaoConcretStrategy usugrad = new GraduacaoConcretStrategy();
+		usugrad.realizarEmprestimo(codUsuario, codLivro);
 		System.out.println("Realizando Emprestimo...");
 	}
 	public void realizarReserva() {
