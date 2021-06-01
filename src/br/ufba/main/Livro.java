@@ -1,4 +1,4 @@
-package br.ufba.idp;
+package br.ufba.main;
 
 public class Livro {
 	private Integer codigo;
@@ -72,9 +72,14 @@ public class Livro {
 		this.edicao = edicao;
 	}
 
-
-
-	
-	
-
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Livro) {
+			if (((Livro) obj).getCodigo().equals(this.codigo)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
 }

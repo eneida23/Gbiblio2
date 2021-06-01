@@ -1,4 +1,4 @@
-package br.ufba.idp;
+package br.ufba.main;
 
 import java.util.ArrayList;
 
@@ -73,6 +73,6 @@ public class GerenciarUsuario {
              if (posicao < this.getQuantidade()) 
                      return usuarios.get(posicao);
              else
-                     throw new IndexOutOfBoundsException("Índice da Pessoa Inválido!");
+                     throw new IndexOutOfBoundsException("ï¿½ndice da Pessoa Invï¿½lido!");
      }
 }

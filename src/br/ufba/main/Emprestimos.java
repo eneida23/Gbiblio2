@@ -1,4 +1,4 @@
-package br.ufba.idp;
+package br.ufba.main;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -9,7 +9,7 @@ public class Emprestimos {
 	// private Livro livro;
 	private Exemplar exemplar;
 	private LocalDateTime data_emp; // Data de emprestimo
-	private Date data_dev; // Prazo maximo de devolução
+	private Date data_dev; // Prazo maximo de devoluï¿½ï¿½o
 	private Date data_rec; // Data em que o livro foi de fato recebido
 
 	/*

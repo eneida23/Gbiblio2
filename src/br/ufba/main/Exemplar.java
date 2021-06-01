@@ -1,4 +1,4 @@
-package br.ufba.idp;
+package br.ufba.main;
 
 public class Exemplar {
 	private Integer codexemplar;
@@ -30,7 +30,7 @@ public class Exemplar {
 		this.livro = livro;
 	}
 
-	public int getQtexemplares() {
+	public int getQtxemplares() {
 		return qtexemplares;
 	}
 

@@ -1,6 +1,8 @@
-package comando.blibio;
+package br.ufba.main;
 
 import java.io.IOException;
+
+import br.ufba.blibio.comando.InterfaceUsuario;
 
 public class SistemaBiblioteca {
 
